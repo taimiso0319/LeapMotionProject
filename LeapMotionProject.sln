@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{1357D787-865E-6C17-21EF-E26CD314277A}") = "LeapMotionProject", "Assembly-CSharp.csproj", "{FCB5B120-E875-CD15-C0E9-2D83258A8F81}"
 EndProject
+Project("{1357D787-865E-6C17-21EF-E26CD314277A}") = "LeapMotionProject", "Assembly-CSharp-Editor.csproj", "{095FE4FE-0FCA-A641-2D72-61F4650B867C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +15,15 @@ Global
 		{FCB5B120-E875-CD15-C0E9-2D83258A8F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCB5B120-E875-CD15-C0E9-2D83258A8F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCB5B120-E875-CD15-C0E9-2D83258A8F81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{095FE4FE-0FCA-A641-2D72-61F4650B867C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095FE4FE-0FCA-A641-2D72-61F4650B867C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095FE4FE-0FCA-A641-2D72-61F4650B867C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095FE4FE-0FCA-A641-2D72-61F4650B867C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-				GlobalSection(MonoDevelopProperties) = preSolution
+																																									GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
