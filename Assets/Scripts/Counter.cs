@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using Leap;
 
@@ -24,13 +25,19 @@ public class Counter : MonoBehaviour {
 	void Update () {
 		if(controller.IsConnected) //controller is a Controller object
 		{
-			Frame frame = controller.Frame(); // controller is a Controller object
-			HandList hands = frame.Hands;
-			Hs = hands.Count;
-			FingerList fingers = frame.Fingers;
-			Fs = fingers.Count;
-			
-			o = frame.Fingers.FingerType(0).Count;
+			Frame frame = controller.Frame();
+			Hand hand = frame.Hand(0);
+			FingerList fingers = hand.Fingers;
+			foreach(Finger finger in fingers){
+				Bone bone;
+				foreach (Bone.BoneType boneType in (Bone.BoneType[]) Enum.GetValues(typeof(Bone.BoneType)))
+				{
+					bone = finger.Bone(boneType);
+					// ... Use bone
+
+				}
+			}
+
 		}
 	}
 }
