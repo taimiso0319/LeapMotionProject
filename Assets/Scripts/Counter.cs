@@ -14,12 +14,12 @@ public class Counter : MonoBehaviour {
 	public float n;
 	public float k;
 	public float c;
-
-
+	
+	
 	// Use this for initialization
 	void Start () {
 		controller = new Controller();
-
+		
 	}
 	// Update is called once per frame
 	void Update () {

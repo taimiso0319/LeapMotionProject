@@ -46,8 +46,29 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\LeapMotion\Scripts\DemoScripts\CubeWave.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\HandController.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\FingerModel.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\HandModel.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\PolyFinger.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\PolyHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\RiggedFinger.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\RiggedHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\RigidFinger.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\RigidHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\SkeletalFinger.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Hands\SkeletalHand.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\ConfidenceTransparency.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\LeapUnityExtensions.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\Utils\MagneticPinch.cs" />
      <Compile Include="Assets\Scripts\Counter.cs" />
-     <Compile Include="Assets\Scripts\sincos.cs" />
+     <Compile Include="Assets\Scripts\FingerPosition.cs" />
+     <Compile Include="Assets\Scripts\MoveSphere.cs" />
+     <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
+     <None Include="Assets\LeapMotion\readme.txt" />
+     <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-LightedOutline.shader" />
+     <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Lighted.shader" />
  <Reference Include="LeapCSharp.NET3.5">
  <HintPath>/Users/KEI/Project/LeapMotionProject/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
  </Reference>
