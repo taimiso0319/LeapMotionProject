@@ -67,8 +67,8 @@ public class FingerPosition : MonoBehaviour {
 								break;
 							case Bone.BoneType.TYPE_DISTAL: 
 								rFingerPos.thumb.distal.x = bone.NextJoint.x;
-								rFingerPos.thumb.distal.x = bone.NextJoint.x;
-								rFingerPos.thumb.distal.x = bone.NextJoint.x;
+								rFingerPos.thumb.distal.y = bone.NextJoint.y;
+								rFingerPos.thumb.distal.z = bone.NextJoint.z;
 								break;
 							}
 							break;
