@@ -1,16 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../ProjectUniduino/Assets/Scripts/Flappy/Counter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\SanaeDate\Assets\JapaneseIrisGardenPack\ReadMe.txt">
     <Files>
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/Counter.cs" Line="7" Column="1" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/Gameover.cs" Line="28" Column="86" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/Score.cs" Line="1" Column="1" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/SimpleMove.cs" Line="1" Column="1" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/ScoreGUI.cs" Line="1" Column="1" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/OnAwake.cs" Line="1" Column="1" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/InstantiateWalls.cs" Line="1" Column="1" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/DeleteWall.cs" Line="1" Column="1" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/CubeUp.cs" Line="1" Column="1" />
+      <File FileName="..\SanaeDate\Assets\JapaneseIrisGardenPack\ReadMe.txt" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
