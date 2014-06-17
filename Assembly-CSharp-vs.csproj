@@ -61,6 +61,7 @@
      <Compile Include="Assets\LeapMotion\Scripts\Utils\ConfidenceTransparency.cs" />
      <Compile Include="Assets\LeapMotion\Scripts\Utils\LeapUnityExtensions.cs" />
      <Compile Include="Assets\LeapMotion\Scripts\Utils\MagneticPinch.cs" />
+     <Compile Include="Assets\Scripts\AngleCal.cs" />
      <Compile Include="Assets\Scripts\Counter.cs" />
      <Compile Include="Assets\Scripts\FingerPosition.cs" />
      <Compile Include="Assets\Scripts\MoveSphere.cs" />

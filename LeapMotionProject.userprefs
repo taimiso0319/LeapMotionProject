@@ -1,16 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../ProjectUniduino/Assets/Scripts/Flappy/Counter.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AngleCal.cs">
     <Files>
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/Counter.cs" Line="7" Column="1" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/Gameover.cs" Line="28" Column="86" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/Score.cs" Line="1" Column="1" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/SimpleMove.cs" Line="1" Column="1" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/ScoreGUI.cs" Line="1" Column="1" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/OnAwake.cs" Line="1" Column="1" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/InstantiateWalls.cs" Line="1" Column="1" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/DeleteWall.cs" Line="1" Column="1" />
-      <File FileName="../ProjectUniduino/Assets/Scripts/Flappy/CubeUp.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Counter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/FingerPosition.cs" Line="1" Column="1" />
+      <File FileName="Assets/Editor/FingerPositionEditor.cs" Line="15" Column="4" />
+      <File FileName="Assets/Scripts/MoveSphere.cs" Line="1" Column="1" />
+      <File FileName="Assets/Editor/MoveSphereEditor.cs" Line="1" Column="1" />
+      <File FileName="../SanaeDate/Assets/Stalk.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/AngleCal.cs" Line="8" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

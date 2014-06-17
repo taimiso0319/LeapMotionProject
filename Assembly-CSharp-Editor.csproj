@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Editor\FingerPositionEditor.cs" />
      <Compile Include="Assets\Editor\MoveSphereEditor.cs" />
      <Compile Include="Assets\LeapMotion\Editor\HandControllerEditor.cs" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
