@@ -64,14 +64,18 @@
      <Compile Include="Assets\Scripts\AngleCal.cs" />
      <Compile Include="Assets\Scripts\Counter.cs" />
      <Compile Include="Assets\Scripts\FingerPosition.cs" />
+     <Compile Include="Assets\Scripts\HandSphere.cs" />
      <Compile Include="Assets\Scripts\MoveSphere.cs" />
+     <Compile Include="Assets\Scripts\MoveSphere2.cs" />
+     <Compile Include="Assets\Scripts\PointableTest.cs" />
+     <Compile Include="Assets\Scripts\direWatcher.cs" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\LeapMotion\readme.txt" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Lighted.shader" />
  <Reference Include="LeapCSharp.NET3.5">
- <HintPath>/Users/KEI/Project/LeapMotionProject/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+ <HintPath>/Users/KEI/Projects/LeapMotionProject/Assets/Plugins_old/LeapCSharp.NET3.5.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
