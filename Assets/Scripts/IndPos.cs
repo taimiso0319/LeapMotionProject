@@ -23,37 +23,34 @@ public class IndPos : MonoBehaviour {
 	void Update () {
 		if(rightMode)Vec = fingerPosition.rFingerPos.index.distal.Vec;
 		else Vec = fingerPosition.lFingerPos.index.distal.Vec;
-		if(130 < Vec.y){		pos = "up";		PlusLR();}
-		else if(Vec.y < 70){ 	pos = "down";	PlusLR();}
-		else{					pos = "middle";	PlusLR();}
+		if(130 < Vec.y){		pos = "Up";		PlusLR();}
+		else if(Vec.y < 70){ 	pos = "Down";	PlusLR();}
+		else{					pos = "Middle";	PlusLR();}
 		if(Input.GetKeyDown(KeyCode.Return))rightMode = !rightMode;
 	}
 	void PlusLR(){
-		if(Vec.x < -20)		pos += "left";
-		else if(20 < Vec.x)	pos += "right";
+		if(Vec.x < -20)		pos += "Left";
+		else if(20 < Vec.x)	pos += "Right";
 	}
 	void UIAction(string finPos){
 		switch(finPos){
-		case "upleft":
-			if(Button[0] != null){
-				Button[0].GetComponent<UIButton>().OnHover(true);
-			}
+		case "UpLeft":
 			break;
-		case "middleft":
+		case "MiddLeft":
 			break;
-		case "downleft":
+		case "DownLeft":
 			break;
-		case "up":
+		case "Up":
 			break;
-		case "middle":
+		case "Middle":
 			break;
-		case "down":
+		case "Down":
 			break;
-		case "upright":
+		case "UpRight":
 			break;
-		case "middleright":
+		case "MiddleRight":
 			break;
-		case "downright":
+		case "DownRight":
 			break;
 		}
 	}
