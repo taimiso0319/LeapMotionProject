@@ -25,17 +25,28 @@ public class GUIBoxDraw : MonoBehaviour {
 
 	public IndPos indPos;
 
+	private bool soundPlay = true;
+
+	private float timerCount = 3f;
+	private float startTimer = 3f;
+
 	private float widthPos;
 	private float heightPos;
 	
-	private float textPosX = 0.165f;
-	private float textPosY = 0.1665f;
-
+	TextMesh countDownGui;
 	GameObject childGuiText;
+	TextMesh childGuiMesh;
+	GameObject mainCamera;
+	FingerPosition fingerPosition;
+	
 
 	void Start(){
+		countDownGui = this.transform.FindChild("CountDownGUI").GetComponent<TextMesh>();
+		fingerPosition = (FingerPosition)GameObject.Find("_Manager").GetComponent<FingerPosition>();
 		indPos = (IndPos)GameObject.Find("IndPos").GetComponent<IndPos>();
 		childGuiText = this.transform.FindChild("GUI").gameObject;
+		childGuiMesh = this.transform.FindChild("GUI").GetComponent<TextMesh>();
+		mainCamera = GameObject.Find("Main Camera").gameObject;
 	}
 
 	void OnGUI(){
@@ -43,51 +54,83 @@ public class GUIBoxDraw : MonoBehaviour {
 		heightPos = Screen.height/3;
 		switch(Gui_Pos){
 		case 0:
-			childGuiText.guiText.text = "おはよう";
-			childGuiText.transform.position = new Vector2(textPosX,textPosY * 5);
+			childGuiMesh.text = "おはよう";
+			meshColor("UpLeft");
+			childGuiText.transform.position = mainCamera.camera.ScreenToWorldPoint(new Vector3(widthPos-widthPos/2,heightPos*3-heightPos/2,0)) + new Vector3(0,0,5);
 			GUI.Box(new Rect(0,0,widthPos,heightPos),"");
 			break;
 		case 1:
-			childGuiText.guiText.text = "こんにちは";
-			childGuiText.transform.position = new Vector2(textPosX * 3,textPosY * 5);
+			childGuiMesh.text = "こんにちは";
+			meshColor("Up");
+			childGuiText.transform.position = mainCamera.camera.ScreenToWorldPoint(new Vector3(widthPos*2-widthPos/2,heightPos*3-heightPos/2,0)) + new Vector3(0,0,5);
 			GUI.Box(new Rect(widthPos,0,widthPos,heightPos),"");
 			break;
 		case 2:
-			childGuiText.guiText.text = "こんばんは";
-			childGuiText.transform.position = new Vector2(textPosX * 5,textPosY * 5);
+			childGuiMesh.text = "こんばんは";
+			meshColor("UpRight");
+			childGuiText.transform.position = mainCamera.camera.ScreenToWorldPoint(new Vector3(widthPos*3-widthPos/2,heightPos*3-heightPos/2,0)) + new Vector3(0,0,5);
 			GUI.Box(new Rect(widthPos*2,0,widthPos,heightPos),"");
 			break;
 		case 3:
-			childGuiText.guiText.text = "お腹がすいた";
-			childGuiText.transform.position = new Vector2(textPosX,textPosY * 3);
+			childGuiMesh.text = "お腹がすいた";
+			meshColor("MiddleLeft");
+			childGuiText.transform.position = mainCamera.camera.ScreenToWorldPoint(new Vector3(widthPos-widthPos/2,heightPos*2-heightPos/2,0)) + new Vector3(0,0,5);
 			GUI.Box(new Rect(0,heightPos,widthPos,heightPos),"");
 			break;
 		case 4:
-			childGuiText.guiText.text = "喉が渇いた";
-			childGuiText.transform.position = new Vector2(textPosX * 3,textPosY * 3);
+			childGuiMesh.text = "喉が渇いた";
+			meshColor("Middle");
+			childGuiText.transform.position = mainCamera.camera.ScreenToWorldPoint(new Vector3(widthPos*2-widthPos/2,heightPos*2-heightPos/2,0)) + new Vector3(0,0,5);
 			GUI.Box(new Rect(widthPos,heightPos,widthPos,heightPos),"");
 			break;
 		case 5: 
-			childGuiText.guiText.text = "トイレに行きたい";
-			childGuiText.transform.position = new Vector2(textPosX * 5,textPosY * 3);
+			childGuiMesh.text = "ありがとう";
+			meshColor("MiddleRight");
+			childGuiText.transform.position = mainCamera.camera.ScreenToWorldPoint(new Vector3(widthPos*3-widthPos/2,heightPos*2-heightPos/2,0)) + new Vector3(0,0,5);
 			GUI.Box(new Rect(widthPos*2,heightPos,widthPos,heightPos),"");
 			break;
 		case 6:
-			childGuiText.guiText.text = "はい";
-			childGuiText.transform.position = new Vector2(textPosX,textPosY);
+			childGuiMesh.text = "はい";
+			meshColor("DownLeft");
+			childGuiText.transform.position = mainCamera.camera.ScreenToWorldPoint(new Vector3(widthPos-widthPos/2,heightPos-heightPos/2,0)) + new Vector3(0,0,5);
 			GUI.Box(new Rect(0,heightPos*2,widthPos,heightPos),"");
 			break;
 		case 7:
-			childGuiText.guiText.text = "いいえ";
-			childGuiText.transform.position = new Vector2(textPosX * 3,textPosY);
+			childGuiMesh.text = "いいえ";
+			meshColor("Down");
+			childGuiText.transform.position = mainCamera.camera.ScreenToWorldPoint(new Vector3(widthPos*2-widthPos/2,heightPos-heightPos/2,0)) + new Vector3(0,0,5);
 			GUI.Box(new Rect(widthPos,heightPos*2,widthPos,heightPos),"");
 			break;
 		case 8:
-			childGuiText.guiText.text = "どちらでもない";
-			childGuiText.transform.position = new Vector2(textPosX * 5,textPosY);
+			childGuiMesh.text = "どちらでもない";
+			meshColor("DownRight");
+			childGuiText.transform.position = mainCamera.camera.ScreenToWorldPoint(new Vector3(widthPos*3-widthPos/2,heightPos-heightPos/2,0)) + new Vector3(0,0,5);
 			GUI.Box(new Rect(widthPos*2,heightPos*2,widthPos,heightPos),"");
 			break;
 		}
+	}
+	void meshColor(string pos){
+		if(indPos.pos == pos && fingerPosition.handExist){
+			childGuiMesh.color = new Color(0.6f,1f,0.6f,0.8f);
+			if(timerCount>0)timerCount -= Time.deltaTime/2;
+			countDown(timerCount.ToString("F0"),Gui_Pos);
+		}else{
+			childGuiMesh.color = Color.white;
+			countDown(null);
+			timerCount = startTimer;
+		}
+	}
+
+	void countDown(string count,int soundNum){
+		countDownGui.text = count;
+		if(soundPlay && count.Equals("0")){
+			audio.Play();
+			soundPlay = false;
+		}
+	}
+	void countDown(string count){
+		countDownGui.text = count;
+		soundPlay = true;
 	}
 	/*
 	private void InitStyle(){

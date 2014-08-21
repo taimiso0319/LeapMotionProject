@@ -23,6 +23,8 @@ public class FingerPosition : MonoBehaviour {
 	public float finDirY;
 	public float finDirZ;
 
+	public bool handExist = false;
+
 	void Start () {
 		handPos = new HandPositions();
 		rFingerPos = new FingerPositions();
@@ -33,10 +35,12 @@ public class FingerPosition : MonoBehaviour {
 	void Update () {
 		Frame frame = controller.Frame();
 		HandList hands = frame.Hands;
+		if(frame.Hands.Count != 0)handExist = true;
+		else handExist = false;
 		foreach(Hand hand in hands){
 			if(hand.IsRight){
 				handPos.right.Vec = new Vector3(hand.PalmPosition.x,hand.PalmPosition.y,hand.PalmPosition.z);
-			}else{
+			}else if(hand.IsLeft){
 				handPos.left.Vec = new Vector3(hand.PalmPosition.x,hand.PalmPosition.y,hand.PalmPosition.z);
 			}
 			FingerList fingers = hand.Fingers;

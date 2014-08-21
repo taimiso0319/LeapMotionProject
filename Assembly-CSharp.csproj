@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\MoveSphere.cs" />
      <Compile Include="Assets\Scripts\MoveSphere2.cs" />
      <Compile Include="Assets\Scripts\PointableTest.cs" />
+     <Compile Include="Assets\Scripts\ScreenPositionTest.cs" />
      <Compile Include="Assets\Scripts\direWatcher.cs" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\LeapMotion\readme.txt" />
