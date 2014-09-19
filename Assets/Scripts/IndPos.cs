@@ -23,14 +23,14 @@ public class IndPos : MonoBehaviour {
 	void Update () {
 		if(rightMode)Vec = fingerPosition.rFingerPos.index.distal.Vec;
 		else Vec = fingerPosition.lFingerPos.index.distal.Vec;
-		if(130 < Vec.y){		pos = "Up";		PlusLR();}
-		else if(Vec.y < 70){ 	pos = "Down";	PlusLR();}
+		if(120 < Vec.y){		pos = "Up";		PlusLR();}
+		else if(Vec.y < 80){ 	pos = "Down";	PlusLR();}
 		else{					pos = "Middle";	PlusLR();}
 		if(Input.GetKeyDown(KeyCode.Return))rightMode = !rightMode;
 	}
 	void PlusLR(){
-		if(Vec.x < -20)		pos += "Left";
-		else if(20 < Vec.x)	pos += "Right";
+		if(Vec.x < -18)		pos += "Left";
+		else if(18 < Vec.x)	pos += "Right";
 	}
 	void UIAction(string finPos){
 		switch(finPos){
